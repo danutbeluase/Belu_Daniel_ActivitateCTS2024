@@ -22,9 +22,7 @@ public class RezultateAnalizeFactory {
             case Tiparit -> {
                 return new RezultatTiparit();
             }
-            default -> {
-                throw new Exception("Acest tip nu este suportat.");
-            }
+            default -> throw new Exception("Acest tip nu este suportat.");
         }
     }
 }
