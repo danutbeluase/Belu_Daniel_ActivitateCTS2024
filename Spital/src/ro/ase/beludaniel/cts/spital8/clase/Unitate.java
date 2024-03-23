@@ -1,4 +1,4 @@
-package ro.ase.beludaniel.cts.spital8;
+package ro.ase.beludaniel.cts.spital8.clase;
 
 public interface Unitate {
     String getNume ();

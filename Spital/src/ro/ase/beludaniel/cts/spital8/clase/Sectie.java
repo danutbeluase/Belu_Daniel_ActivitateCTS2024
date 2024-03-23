@@ -1,4 +1,6 @@
-package ro.ase.beludaniel.cts.spital8;
+package ro.ase.beludaniel.cts.spital8.clase;
+
+import ro.ase.beludaniel.cts.spital8.clase.Unitate;
 
 public class Sectie implements Unitate {
     private String nume;

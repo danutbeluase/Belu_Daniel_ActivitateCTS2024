@@ -1,4 +1,4 @@
-package ro.ase.beludaniel.cts.spital8;
+package ro.ase.beludaniel.cts.spital8.clase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
