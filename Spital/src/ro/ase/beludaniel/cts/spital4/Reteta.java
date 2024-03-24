@@ -26,6 +26,6 @@ public class Reteta {
     }
 
     public List<Integer> getSolutii() {
-        return  this.cantitati;
+        return this.cantitati;
     }
 }
