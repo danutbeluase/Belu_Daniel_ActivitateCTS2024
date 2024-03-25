@@ -1,26 +1,19 @@
 package ro.ase.beludaniel.cts.stb4.program;
 
+import ro.ase.beludaniel.cts.stb4.adaptor.*;
 import ro.ase.beludaniel.cts.stb4.clase.*;
+import ro.ase.beludaniel.cts.stb4.interfete.*;
 
 public class Program {
     public static void main(String[] args) {
-        SistemBilete sistemBileteMetrou = new SistemBileteMetrou();
-        sistemBileteMetrou.valideaza(TipBilet.DouaCalatorii);
+        SistemPlataMetrorex sistemMetrorex = new SistemMetrorex();
+        sistemMetrorex.achizitioneazaTichet(TipBiletMetrou.AbonamentLunar);
 
-        SistemBileteStbAdapter sistemBileteStb  = new SistemBileteStbAdapter(sistemBileteMetrou, true);
-        sistemBileteStb.valideaza(TipBilet.Simplu);
+        SistemPlataStb sistemPlataStb = new SistemStb();
+        sistemPlataStb.achizitioneaza(TipBiletStb.ToateLiniile);
 
-        SistemBilete sistemSimplu = new SistemBileteStb();
-        sistemSimplu.valideaza(TipBilet.ZeceCalatorii);
-
-        sistemBileteStb = new SistemBileteStbAdapter(sistemSimplu, false);
-        sistemBileteStb.valideaza(TipBilet.Simplu);
-
-        try {
-            sistemBileteStb = new SistemBileteStbAdapter(sistemBileteStb, false);
-        }
-        catch (UnsupportedOperationException exception) {
-            System.out.println(exception.getMessage());
-        }
+        AdaptorSistemPlata sistemUnic = new AdaptorSistemPlata(sistemMetrorex);
+        sistemUnic.achizitioneaza(TipBiletStb.LiniSimpla);
+        sistemUnic.achizitioneazaTichet(TipBiletMetrou.CalatoriiZece);
     }
 }
