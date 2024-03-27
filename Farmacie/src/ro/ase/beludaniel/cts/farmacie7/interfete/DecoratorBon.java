@@ -6,6 +6,7 @@ public class DecoratorBon implements PrototipBon {
     public DecoratorBon(PrototipBon bon) {
         this.bon = bon;
     }
+
     /**
      * Tipareste bon personalizat
      */
